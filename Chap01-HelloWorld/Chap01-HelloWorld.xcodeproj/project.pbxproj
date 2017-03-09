@@ -14,6 +14,7 @@
 		90692EC21E704F8D009B726F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90692EC11E704F8D009B726F /* Assets.xcassets */; };
 		90692EC51E704F8D009B726F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90692EC31E704F8D009B726F /* LaunchScreen.storyboard */; };
 		90692ED01E704F8D009B726F /* Chap01_HelloWorldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90692ECF1E704F8D009B726F /* Chap01_HelloWorldUITests.m */; };
+		908FA4671E71A86F00F13633 /* lena.png in Resources */ = {isa = PBXBuildFile; fileRef = 908FA4661E71A86F00F13633 /* lena.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		90692ECB1E704F8D009B726F /* Chap01-HelloWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chap01-HelloWorldUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90692ECF1E704F8D009B726F /* Chap01_HelloWorldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Chap01_HelloWorldUITests.m; sourceTree = "<group>"; };
 		90692ED11E704F8D009B726F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		908FA4661E71A86F00F13633 /* lena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lena.png; path = ../../../../Pictures/lena.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		90692EB41E704F8C009B726F /* Chap01-HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				908FA4661E71A86F00F13633 /* lena.png */,
 				90692EB81E704F8C009B726F /* AppDelegate.h */,
 				90692EB91E704F8C009B726F /* AppDelegate.m */,
 				90692EBB1E704F8C009B726F /* ViewController.h */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90692EC51E704F8D009B726F /* LaunchScreen.storyboard in Resources */,
+				908FA4671E71A86F00F13633 /* lena.png in Resources */,
 				90692EC21E704F8D009B726F /* Assets.xcassets in Resources */,
 				90692EC01E704F8C009B726F /* Main.storyboard in Resources */,
 			);

@@ -14,11 +14,13 @@
 
 @implementation ViewController
 
+@synthesize imageView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
+    /*
     // Console output
     NSLog(@"Hello, World!");
     
@@ -32,6 +34,13 @@
                otherButtonTitles:nil];
     // tell the system to show the alert when the view finish the loading.
     [alert show];
+     */
+
+    // Read the image
+    image = [UIImage imageNamed:@"lena.png"];
+    if (image != nil) {
+        imageView.image = image; // Display the image
+    }
 }
 
 
