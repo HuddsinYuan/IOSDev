@@ -1,4 +1,6 @@
-Frameworks/
+Framework/
 Products/
 *UITests/
-
+*.hpp
+opencv2
+.DS_Store
