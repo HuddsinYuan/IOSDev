@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIImage* originImage = [UIImage imageNamed:@"lena.png"];
+    originImage = [UIImage imageNamed:@"lena.png"];
     if( originImage != nil ) {
         originImageView.image = originImage;
     }
