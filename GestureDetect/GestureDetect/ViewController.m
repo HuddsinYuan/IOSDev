@@ -20,16 +20,38 @@
     NSBundle *bundle = [NSBundle mainBundle];
     self.myimage = [[UIImage alloc] initWithContentsOfFile:[bundle pathForResource:@"lena" ofType:@"png"]];
     
+    self.imageView = [[UIImageView alloc] init];
     self.imageView.image = self.myimage;
+    self.imageView.userInteractionEnabled = YES;
+    UIPanGestureRecognizer *panrecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(foundpanTap:)];
     
-    UIRotationGestureRecognizer *recognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(foundTap:)];
+    panrecognizer.minimumNumberOfTouches = 1;
+    panrecognizer.maximumNumberOfTouches = 1;
     
-    [self.view addGestureRecognizer: recognizer];
+    CGRect frame = CGRectMake(96.0f, 68.0f, 128.0f, 128.0f);
+    
+    self.imageView.frame = frame;
+    [self.view addSubview:self.imageView];
+    
+    UIRotationGestureRecognizer *rotrecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(foundrotTap:)];
+    
+    [self.view addGestureRecognizer: panrecognizer];
+    [self.view addGestureRecognizer: rotrecognizer];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)foundTap:(UIRotationGestureRecognizer*) paramSender
+- (void)foundpanTap:(UIPanGestureRecognizer*) paramSender
+{
+//    NSLog(@"Draw state = %s", paramSender.state);
+    
+    if(paramSender.state != UIGestureRecognizerStateEnded &&
+       paramSender.state != UIGestureRecognizerStateFailed) {
+        CGPoint loc = [paramSender locationInView:paramSender.view.superview];
+        paramSender.view.center = loc;
+    }
+}
+- (void)foundrotTap:(UIRotationGestureRecognizer*) paramSender
 {
     self.imageView.transform = CGAffineTransformMakeRotation(rotationAngleInRadius + paramSender.rotation);
     
