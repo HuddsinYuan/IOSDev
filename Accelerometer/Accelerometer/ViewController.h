@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *xLabel;
+#import <CoreMotion/CoreMotion.h>
 
+@interface ViewController : UIViewController
+
+
+@property (strong, nonatomic) IBOutlet UILabel *xLabel;
 @property (strong, nonatomic) IBOutlet UILabel *yLabel;
 @property (strong, nonatomic) IBOutlet UILabel *zLabel;
 @property (strong, nonatomic) IBOutlet UIProgressView *xbar;
 @property (strong, nonatomic) IBOutlet UIProgressView *ybar;
 @property (strong, nonatomic) IBOutlet UIProgressView *zbar;
+
+@property (nonatomic, strong) CMMotionManager* motionManager;
 
 @end
 
