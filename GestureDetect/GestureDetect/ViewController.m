@@ -19,23 +19,25 @@
 
     NSBundle *bundle = [NSBundle mainBundle];
     self.myimage = [[UIImage alloc] initWithContentsOfFile:[bundle pathForResource:@"lena" ofType:@"png"]];
+//    UIPanGestureRecognizer *panrecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(foundpanTap:)];
     
-    self.imageView = [[UIImageView alloc] init];
+//    panrecognizer.minimumNumberOfTouches = 1;
+//    panrecognizer.maximumNumberOfTouches = 1;
+    
+//    CGRect frame = CGRectMake(107.0f, 253.0f, 160.0f, 160.0f);
+    
+    
+//    self.imageView = [[UIImageView alloc] init];
     self.imageView.image = self.myimage;
     self.imageView.userInteractionEnabled = YES;
-    UIPanGestureRecognizer *panrecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(foundpanTap:)];
     
-    panrecognizer.minimumNumberOfTouches = 1;
-    panrecognizer.maximumNumberOfTouches = 1;
     
-    CGRect frame = CGRectMake(96.0f, 68.0f, 128.0f, 128.0f);
-    
-    self.imageView.frame = frame;
-    [self.view addSubview:self.imageView];
+//    self.imageView.frame = frame;
+//    [self.view addSubview:self.imageView];
     
     UIRotationGestureRecognizer *rotrecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(foundrotTap:)];
     
-    [self.view addGestureRecognizer: panrecognizer];
+//    [self.view addGestureRecognizer: panrecognizer];
     [self.view addGestureRecognizer: rotrecognizer];
     
     // Do any additional setup after loading the view, typically from a nib.

@@ -13,7 +13,7 @@
     CGFloat rotationAngleInRadius;
 }
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *imageView;
 
 @property (strong, nonatomic) UIImage* myimage;
 @end
